@@ -4,7 +4,7 @@
 
 mode = 0
 
-# REPTE 6: ESTACIÓ METEOROLÒGICA
+# Repte 6: Estacio meteorologica
 def estacio_meteorologica():
     global mode
     basic.clear_screen()
@@ -17,7 +17,7 @@ def estacio_meteorologica():
         
         basic.pause(1000)
 
-# REPTE 7: MOURE LA GOTA
+# Repte 7: Moure la gota
 def moure_gota():
     global mode
     basic.clear_screen()
@@ -68,3 +68,21 @@ def on_button_pressed_a():
         estacio_meteorologica()
         mostrar_menu()
 input.on_button_pressed(Button.A, on_button_pressed_a)
+
+def on_button_pressed_b():
+    global mode
+    if mode == 0:
+        mode = 2
+        moure_gota()
+        mostrar_menu()
+input.on_button_pressed(Button.B, on_button_pressed_b)
+
+# Pin0 per sortir
+def on_pin_pressed_p0():
+    global mode
+    if mode != 0:
+        mode = 0
+        mostrar_menu()
+input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
+
+mostrar_menu()

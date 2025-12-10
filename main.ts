@@ -2,7 +2,7 @@
 //  botó B: moure la gota
 //  pin0: sortir al menu
 let mode = 0
-//  REPTE 6: ESTACIÓ METEOROLÒGICA
+//  Repte 6: Estacio meteorologica
 function estacio_meteorologica() {
     let temp: number;
     
@@ -15,7 +15,7 @@ function estacio_meteorologica() {
     }
 }
 
-//  REPTE 7: MOURE LA GOTA
+//  Repte 7: Moure la gota
 function moure_gota() {
     let accX: number;
     let accY: number;
@@ -71,3 +71,22 @@ input.onButtonPressed(Button.A, function on_button_pressed_a() {
     }
     
 })
+input.onButtonPressed(Button.B, function on_button_pressed_b() {
+    
+    if (mode == 0) {
+        mode = 2
+        moure_gota()
+        mostrar_menu()
+    }
+    
+})
+//  Pin0 per sortir
+input.onPinPressed(TouchPin.P0, function on_pin_pressed_p0() {
+    
+    if (mode != 0) {
+        mode = 0
+        mostrar_menu()
+    }
+    
+})
+mostrar_menu()
