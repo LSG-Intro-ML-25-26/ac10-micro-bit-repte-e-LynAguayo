@@ -17,7 +17,7 @@ Pots triar entre:
 Mostra contínuament la temperatura en forma de **gràfic de barres** (fins a 50 °C).
 El mode funciona fins que premis **P0** per sortir al menú.
 
-## 💧 Mode 2: Gota en moviment
+## Mode 2: Gota en moviment
 
 Una gota (un LED encès) es mou segons la **inclinació** del micro:bit:
 
