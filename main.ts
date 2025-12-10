@@ -15,3 +15,38 @@ function estacio_meteorologica() {
     }
 }
 
+//  REPTE 7: MOURE LA GOTA
+function moure_gota() {
+    let accX: number;
+    let accY: number;
+    
+    basic.clearScreen()
+    //  posició inicial
+    let x = 2
+    let y = 2
+    while (mode == 2) {
+        //  encendre LED
+        led.plot(x, y)
+        basic.pause(50)
+        //  apagar LED
+        led.unplot(x, y)
+        //  llegir acceleracio
+        accX = input.acceleration(Dimension.X)
+        accY = input.acceleration(Dimension.Y)
+        //  moure esquerra/dreta (eix X)
+        if (accX <= -150 && x > 0) {
+            x = x - 1
+        } else if (accX >= 150 && x < 4) {
+            x = x + 1
+        }
+        
+        //  moure amunt/avall (eix Y)
+        if (accY <= -150 && y > 0) {
+            y = y - 1
+        } else if (accY >= 150 && y < 4) {
+            y = y + 1
+        }
+        
+    }
+}
+
