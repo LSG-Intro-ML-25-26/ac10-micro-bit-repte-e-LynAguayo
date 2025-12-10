@@ -1,24 +1,30 @@
+# Estació Meteorològica i Gota en Moviment 
 
-> Obre aquesta pàgina a [https://raimonizard.github.io/microbit-template-repo-python/](https://raimonizard.github.io/microbit-template-repo-python/)
+Aquest programa mostra un **menú** amb dues funcions: una **estació meteorològica** i un joc de **moure una gota** inclinant el micro:bit.
 
-## Utilitza-ho com a extensió
+## Menú 
 
-Aquest dipòsit es pot afegir com una **extensió** a MakeCode.
+En iniciar, el micro:bit mostra el **MENU**.
 
-* obre [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* fes clic a **Projecte nou**
-* fes clic a **Extensions** sota el menú de la roda dentada
-* cercar **https://github.com/raimonizard/microbit-template-repo-python** i importar
+Pots triar entre:
 
-## Edita aquest projecte
+* **Botó A → TEMP**: Estació meteorològica
+* **Botó B → GOTA**: Moure la gota
+* **Pin P0 → EXIT**: Tornar al menú quan estiguis dins d’un mode
 
-Per editar aquest repositori a MakeCode.
+## Mode 1: Estació meteorològica
 
-* obre [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* fes clic a ** Importa** i després a ** Importa URL**
-* enganxa **https://github.com/raimonizard/microbit-template-repo-python** i clica importar
+Mostra contínuament la temperatura en forma de **gràfic de barres** (fins a 50 °C).
+El mode funciona fins que premis **P0** per sortir al menú.
 
-#### Metadades (utilitzades per a la cerca, renderització)
+## 💧 Mode 2: Gota en moviment
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+Una gota (un LED encès) es mou segons la **inclinació** del micro:bit:
+
+* Inclinació horitzontal → es mou a esquerra/dreta
+* Inclinació vertical → es mou amunt/avall
+
+La gota sempre es mou dins del rang de la matriu 5×5.
+Prem **P0** per tornar al menú.
+
+![captura](captura_e.png)
