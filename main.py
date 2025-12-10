@@ -2,7 +2,7 @@
 # botó B: moure la gota
 # pin0: sortir al menu
 
-mode = 0  
+mode = 0
 
 # REPTE 6: ESTACIÓ METEOROLÒGICA
 def estacio_meteorologica():
@@ -49,3 +49,22 @@ def moure_gota():
             y = y - 1
         elif accY >= 150 and y < 4:
             y = y + 1
+
+# Menu
+def mostrar_menu():
+    basic.clear_screen()
+    basic.show_string("MENU")
+    basic.pause(500)
+    basic.show_string("A:TEMP")
+    basic.pause(500)
+    basic.show_string("B:GOTA")
+    basic.pause(500)
+    basic.show_string("P0:EXIT")
+
+def on_button_pressed_a():
+    global mode
+    if mode == 0:
+        mode = 1
+        estacio_meteorologica()
+        mostrar_menu()
+input.on_button_pressed(Button.A, on_button_pressed_a)

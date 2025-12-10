@@ -50,3 +50,24 @@ function moure_gota() {
     }
 }
 
+//  Menu
+function mostrar_menu() {
+    basic.clearScreen()
+    basic.showString("MENU")
+    basic.pause(500)
+    basic.showString("A:TEMP")
+    basic.pause(500)
+    basic.showString("B:GOTA")
+    basic.pause(500)
+    basic.showString("P0:EXIT")
+}
+
+input.onButtonPressed(Button.A, function on_button_pressed_a() {
+    
+    if (mode == 0) {
+        mode = 1
+        estacio_meteorologica()
+        mostrar_menu()
+    }
+    
+})
