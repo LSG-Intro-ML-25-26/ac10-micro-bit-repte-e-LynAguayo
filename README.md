@@ -28,3 +28,4 @@ La gota sempre es mou dins del rang de la matriu 5×5.
 Prem **P0** per tornar al menú.
 
 ![captura](captura_e.png)
+.
